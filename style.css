@@ -6,6 +6,7 @@
     --very-dark-grayish-blue: hsl(237, 12%, 33%);
     --dark-grayish-blue: hsl(240, 6%, 50%);
     --light-grayish-blue: hsl(240, 5%, 91%);
+    --card-shadow: 0px 5px 40px 10px rgba(0,0,0,0.17);
 }
 
 html {
@@ -55,6 +56,7 @@ body {
 	background-position: center 0%;
 	background-size: 18rem;
     padding: 3rem 1.5rem 2.5rem 1.5rem;
+    box-shadow: var(--card-shadow);
 } 
 
 .card__left {
