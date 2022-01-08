@@ -1,8 +1,8 @@
 :root {
     --very-dark-desaturated-blue: hsl(238, 29%, 16%);
     --soft-red: hsl(14, 88%, 65%);
-    --gradient-violet: hsl(273, 75%, 66%);
-    --gradient-blue: hsl(240, 73%, 65%);
+    --gradient-violet: #af67e9;
+    --gradient-blue: #6565e7;
     --very-dark-grayish-blue: hsl(237, 12%, 33%);
     --dark-grayish-blue: hsl(240, 6%, 50%);
     --light-grayish-blue: hsl(240, 5%, 91%);
@@ -19,6 +19,119 @@ html {
 }
 
 body {
+    min-height: 100vh;
     font-family: 'Kumbh Sans', sans-serif;
     font-size: .75rem;
+    color: var(--dark-grayish-blue);
+    background: rgb(175,103,233);
+    background: linear-gradient(180deg, rgba(175,103,233,1) 0%, rgba(101,101,231,1) 100%);
+    padding: 5rem 1.5rem;
+}
+
+.flex {
+    display: flex;
+}
+
+.column {
+    flex-direction: column;
+}
+
+.center {
+    align-items: center;
+    justify-content: center;
+}
+
+.card__box {
+    display: none;
+}
+
+.card {
+    max-width: 56rem;
+    width: 100%;
+    background-color: #fff;
+    border-radius: 25px;
+    padding: 3rem 1.5rem 2.5rem 1.5rem;
+} 
+
+.card__left {
+    position: relative;
+}
+
+.card__left img {
+    position: absolute;
+    top: -11rem;
+    transform: translateX(-50%);
+    max-width: 19rem;
+    width: 100%;
+    height: auto;
+}
+
+.right__title {
+    text-align: center;
+    font-size: 2rem;
+    color: var(--very-dark-desaturated-blue);
+    padding-top: 4.5rem;
+    padding-bottom: 0.5rem;
+}
+
+.accordion__item {
+    border-bottom: 1px solid var(--light-grayish-blue);
+    padding-bottom: 1rem;
+}
+
+.accordion__question {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: left;
+    font-size: .875rem;
+    font-family: 'Kumbh Sans', sans-serif;
+    background-color: transparent;
+    border: none;
+    padding-top: 1rem;
+    transition-duration: .4s;
+}
+
+.accordion__question:focus {
+    color: var(--soft-red);
+}
+
+.accordion__question::after {
+    content: "";
+    display: block;
+    width: 0.6rem;
+    height: 1rem;
+    background-image: url(./images/icon-arrow-down.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center center;
+    transition: transform 300ms ease-in-out;
+}
+
+.accordion__question.open {
+    font-weight: 700;
+}
+
+.accordion__question.open::after {
+    transform: rotate(180deg);
+}
+
+.accordion__text {
+    max-width: 90%;
+    line-height: 1.4;
+    padding-top: 0.5rem;
+} 
+
+.accordion__collapse.collapse {
+    display: none;
+}
+
+.accordion__collapse.collapsing {
+    max-height: 0;
+    overflow: hidden;
+}
+
+.accordion__collapse.open {
+    display: block;
 }
