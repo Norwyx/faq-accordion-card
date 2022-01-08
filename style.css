@@ -50,6 +50,10 @@ body {
     width: 100%;
     background-color: #fff;
     border-radius: 25px;
+    background-image: url('images/bg-pattern-mobile.svg');
+	background-repeat: no-repeat;
+	background-position: center 0%;
+	background-size: 18rem;
     padding: 3rem 1.5rem 2.5rem 1.5rem;
 } 
 
@@ -70,7 +74,7 @@ body {
     text-align: center;
     font-size: 2rem;
     color: var(--very-dark-desaturated-blue);
-    padding-top: 4.5rem;
+    padding-top: 6rem;
     padding-bottom: 0.5rem;
 }
 
@@ -88,6 +92,7 @@ body {
     font-size: .875rem;
     font-family: 'Kumbh Sans', sans-serif;
     background-color: transparent;
+    color: var(--very-dark-grayish-blue);
     border: none;
     padding-top: 1rem;
     transition-duration: .4s;
@@ -138,4 +143,66 @@ body {
 
 .accordion__collapse.open {
     display: block;
+}
+
+/* Responsive */
+/* 960px and above */
+@media (min-width: 60rem) {
+    body {
+        padding: 5rem;
+    }
+    
+    .card {
+        flex-direction: row;
+        position: relative;
+        gap: 1rem;
+        background-image: url(./images/bg-pattern-desktop.svg);
+        background-position: -14% center;
+        background-size: 45%;
+        background-repeat: no-repeat;
+        padding: 5rem 6rem 5rem 0;
+    }
+    
+    .card__box {
+        display: block;
+        position: absolute;
+        z-index: 1;
+        top: 57%;
+		left: 0;
+		transform: translateX(-50%) translateY(-50%);
+    }   
+
+    .card__left, .card__right {
+        flex: 1;
+    }
+
+    .card__left {
+        display: flex;
+        align-items: center;
+        overflow: hidden;
+    }
+
+    .card__left img {
+        max-width: 80rem;
+        width: 100%;
+        position: relative;
+        top: auto;
+        left: auto;
+        transform: translateX(-4rem);
+    }
+
+    .right__title {
+        text-align: left;
+        font-size: 2.5rem;
+        padding-top: 1rem;
+        padding-bottom: 2rem;
+    }
+
+    .accordion__question {
+        font-size: 1rem;
+    }
+
+    .accordion__text {
+        font-size: .8438rem;
+    } 
 }
