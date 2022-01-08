@@ -93,6 +93,10 @@ body {
     transition-duration: .4s;
 }
 
+.accordion__question:hover {
+    cursor: pointer;
+}
+
 .accordion__question:focus {
     color: var(--soft-red);
 }
