@@ -134,6 +134,10 @@ body {
     padding-top: 0.5rem;
 } 
 
+.accordion__collapse {
+    transition: height .4s ease;
+}
+
 .accordion__collapse.collapse {
     display: none;
 }
